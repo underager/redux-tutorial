@@ -17,7 +17,7 @@ const PostsPage = ({ dispatch, loading, posts, hasErrors }) => {
     if (hasErrors) return <p>Unable to display posts.</p>;
     // console.log('loading : ' + loading);
     // console.log('psots : ' + posts);
-    return posts.map((post) => <Post key={post.id} post={post} breif />);
+    return posts.map((post) => <Post key={post.id} post={post} excerpt />);
   };
 
   return (

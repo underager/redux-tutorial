@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Post = ({ post, brief }) => (
+export const Post = ({ post, excerpt }) => (
   <article className="post-excerpt">
     <h2>{post.title}</h2>
-    <p>{brief ? post.body.substring(0, 100) : post.body}</p>
+    <p>{excerpt ? post.body.substring(0, 100) : post.body}</p>
 
-    {!brief && (
+    {excerpt && (
       <Link to={`/posts/${post.id}`} className="button">
         View Posts
       </Link>
